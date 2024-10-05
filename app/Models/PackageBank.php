@@ -16,4 +16,8 @@ class PackageBank extends Model
         'bank_account_number',
         'logo',
     ];
+
+    public function bookings() {
+        return $this->hasMany(PackageBooking::class);
+    }
 }

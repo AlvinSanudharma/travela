@@ -14,4 +14,8 @@ class PackagePhoto extends Model
         'photo',
         'package_tour_id'
     ];
+
+    public function tours() {
+        return $this->belongsTo(PackageTour::class);
+    }
 }
