@@ -9,4 +9,8 @@ class FrontController extends Controller
     public function book() {
 
     }
+
+    public function index() {
+        return view('welcome');
+    }
 }
