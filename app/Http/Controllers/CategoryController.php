@@ -45,7 +45,7 @@ class CategoryController extends Controller
 
         $newCategory = Category::create($validated);
 
-        return redirect()->route('admin.categories.index');
+        return redirect()->route('admin.categories.index')->with('success', 'Berhasil tambah data!');
     }
 
     /**
@@ -77,6 +77,8 @@ class CategoryController extends Controller
      */
     public function destroy(Category $category)
     {
-        //
+        $category->delete();
+
+        return redirect()->route('admin.categories.index');
     }
 }

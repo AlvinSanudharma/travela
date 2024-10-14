@@ -9,6 +9,10 @@
             </a>
         </div>
     </x-slot>
+
+    @if (session('success'))
+         <x-success-alert :message="session('success')"  />
+    @endif
     
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
@@ -35,7 +39,7 @@
                         <a href=" " class="font-bold py-4 px-6 bg-indigo-700 text-white rounded-full">
                             Edit
                         </a>
-                        <form action=" " method="POST">
+                        <form action="{{ route('admin.categories.destroy', $category) }}" method="POST">
                             @csrf
                             @method('DELETE')
                             <button type="submit" class="font-bold py-4 px-6 bg-red-700 text-white rounded-full">
