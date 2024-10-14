@@ -21,7 +21,7 @@ class CategorySeeder extends Seeder
 
         Category::create([
             'name' => 'Glamping',
-            'slug' => 'glamping-qwer',
+            'slug' => 'glamping',
             'icon' => null
         ]);
 

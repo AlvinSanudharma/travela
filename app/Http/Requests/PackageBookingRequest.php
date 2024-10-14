@@ -11,7 +11,7 @@ class PackageBookingRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,7 +22,8 @@ class PackageBookingRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'quantity' => 'required|integer',
+            'start_date' => 'required|date|after:today'
         ];
     }
 }
