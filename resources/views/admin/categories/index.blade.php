@@ -28,7 +28,7 @@
                         @endif
                         <div class="flex flex-col">
                             <p class="text-slate-500 text-sm">Name</p>
-                           <h3 class="text-indigo-950 text-xl font-bold">{{ $category->name }}</h3>
+                        <h3 class="text-indigo-950 text-xl font-bold">{{ $category->name }}</h3>
                         </div>
                     </div> 
                     <div  class="hidden md:flex flex-col">
